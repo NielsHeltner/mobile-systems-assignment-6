@@ -1,4 +1,4 @@
-package sems.eearchitecturalprototype.server;
+package sems.eearchitecturalprototype.server.interfaces;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package sems.eearchitecturalprototype.client;
+package sems.eearchitecturalprototype.client.interfaces;
 
 import sems.eearchitecturalprototype.common.IDataPoint;
 

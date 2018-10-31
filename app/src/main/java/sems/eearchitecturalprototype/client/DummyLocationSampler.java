@@ -1,5 +1,6 @@
 package sems.eearchitecturalprototype.client;
 
+import sems.eearchitecturalprototype.client.interfaces.ILocationSampler;
 import sems.eearchitecturalprototype.common.IDataPoint;
 
 public class DummyLocationSampler implements ILocationSampler {
