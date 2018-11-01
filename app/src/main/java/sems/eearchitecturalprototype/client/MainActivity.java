@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements IClient {
 
         executorService = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
         dataPointBuffer = Collections.synchronizedList(new ArrayList());
-        dutyCycleInterval = new AtomicInteger(server.DEFAULT_DUTY_CYCLE);
+        dutyCycleInterval = new AtomicInteger(server.DEFAULT_DUTY_CYCLE_SECONDS);
 
         setServer(new Server());
         setLocationSampler(new DummyLocationSampler());

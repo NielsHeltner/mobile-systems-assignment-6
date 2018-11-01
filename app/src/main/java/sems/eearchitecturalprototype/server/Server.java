@@ -53,10 +53,15 @@ public class Server implements IServer {
 
     public void sendRequest() {
         for (IClient client : clients) {
-            client.onSendRequest(new Request(dutyCycles.getOrDefault(client, DEFAULT_DUTY_CYCLE)));
+            client.onSendRequest(new Request(dutyCycles.getOrDefault(client, DEFAULT_DUTY_CYCLE_SECONDS)));
         }
     }
 
+    /**
+     * Method for dependency injection / late binding of a dynamicDutyCycleCalculator
+     *
+     * @param calculator an implementation of the IDynamicDutyCycleCalculator interface
+     */
     public void setDynamicDutyCycleCalculator(IDynamicDutyCycleCalculator calculator) {
         this.calculator = calculator;
     }
