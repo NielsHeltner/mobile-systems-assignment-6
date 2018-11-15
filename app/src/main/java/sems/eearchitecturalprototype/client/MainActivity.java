@@ -51,17 +51,13 @@ public class MainActivity extends AppCompatActivity implements IClient {
     }
 
     @Override
-    public boolean onSendRequest(IRequest request) {
+    public void onSendRequest(IRequest request) {
         Log.d(getString(R.string.app_name), "Received new request");
         if(dataPointBuffer.size() > RESPONSE_THRESHOLD) {
             Log.d(getString(R.string.app_name), "Handling request, new duty cycle " + request.getDutyCycleInterval());
             dutyCycleInterval.set(request.getDutyCycleInterval());
             sendResponse();
             dataPointBuffer.clear();
-            return true;
-        }
-        else {
-            return false;
         }
     }
 
